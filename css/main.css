@@ -28,7 +28,7 @@ html {
  */
 
 ::-moz-selection {
-  background: #b3d4fc;
+  background: #313940;
   text-shadow: none;
 }
 
@@ -86,6 +86,221 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+/* ===== 
+
+    font-family: 'Caesar Dressing', cursive;
+    font-family: 'Ubuntu', sans-serif; 
+    
+======== */
+
+
+  :root {
+    --yellow: #F0D36B;
+    --white: #F2F2F2;
+    --black: #0B0C0D;
+    --red: #590202;
+    --gray: #313940;
+  }
+
+  body {
+    background-color: #313940;
+    font-family: 'Ubuntu', sans-serif; 
+    font-size: 16px;
+  }
+
+  * {
+    margin: 0; 
+    padding: 0
+  }
+
+  /* MOBILE-FIRST STYLES */
+
+  
+
+  /* NAVIGATION BAR */
+
+ .nav-bar {
+  height: 70px; 
+  background: var(--black);
+ }
+
+.brand {
+  float: left; 
+  position: absolute; 
+  padding-left: 20px; 
+  line-height: 70px; 
+  font-size: 1rem;
+}
+
+.brand a {
+  font-family: 'Caesar Dressing', cursive;
+  text-decoration: none;
+  color: var(--white); 
+}
+
+.nav-container {
+  max-width: 1000px; 
+  margin: 0 auto; 
+}
+
+nav {
+  float: right; 
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  float: left; 
+  position: relative; 
+}
+
+nav ul li a {
+  display: block;
+  padding: 0 20px;
+  line-height: 70px; 
+  background: var(--black); 
+  text-decoration: none;
+  color: var(--white); 
+  font-family: 'Caesar Dressing', cursive;
+}
+
+nav ul li a:hover {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+nav ul li a:not(:only-child):after {
+  content: '▼';
+  padding-left: 5px;
+}
+
+nav ul li ul li {
+  min-width: 190px; 
+}
+
+nav ul li ul li a {
+  padding: 15px; 
+  line-height: 20px; 
+}
+
+.nav-dropdown {
+  position: absolute; 
+  display: none; 
+  z-index: 1; 
+}
+
+.nav-mobile {
+  display: none; 
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  height: 70px; 
+  width: 70px; 
+}
+
+#nav-toggle {
+  position:absolute;
+  left: 18px; 
+  top: 22px; 
+  cursor: pointer; 
+  padding: 10px 35px 15px 0px; 
+}
+
+#nav-toggle span,
+#nav-toggle span::before,
+#nav-toggle span::after {
+    position: absolute;
+    display: block;
+    content: '';
+    background: #fff;
+    height: 5px;
+    width: 35px;
+    transition: all 300ms ease-in-out;
+}
+
+#nav-toggle span::before {
+  top: -10px; 
+}
+
+#nav-toggle span::after {
+  bottom: -10px; 
+}
+
+#nav-toggle.active span {
+  background-color: transparent;
+}
+
+#nav-toggle.active span::before, #nav-toggle.active span::after {
+  top: 0;
+}
+
+#nav-toggle.active span::before {
+  transform: rotate(45deg); 
+}
+
+#nav-toggle.active span::after {
+  transform: rotate(-45deg); 
+}
+
+/* END NAVIGATION BAR */ 
+
+header img {
+  max-width: 99%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+
+/* TABLET STYLES */
+
+/* TABLET - NAVIGATION BAR */
+
+@media only screen and (max-width: 768px) {
+
+  .nav-mobile {
+    display: block;
+  }
+
+  nav {
+    width: 100%; 
+    padding: 70px 0 15px; 
+  }
+
+  nav ul {
+    display: none; 
+  }
+
+  nav ul li {
+    float: none; 
+  }
+
+  nav ul li a {
+    padding: 15px; 
+    line-height: 20px;
+    padding-left: 25%;
+  }
+
+  nav ul li ul li a {
+    padding-left: 30%; 
+  }
+
+  .nav-dropdown {
+    position: static; 
+  }
+}
+
+@media screen and (min-width: 799px){
+  .nav-list{
+      display: block !important;
+  }
+}
+
 
 /* ==========================================================================
    Helper classes
