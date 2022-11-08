@@ -12,7 +12,7 @@ $(document).ready(function() {
         $('nav ul').slideToggle(); 
     })
 
-    $('#nav-toggle').on('click', function () {
+    $('#nav-toggle').on('click', function() {
         this.classList.toggle('active'); 
     }); 
 }); 

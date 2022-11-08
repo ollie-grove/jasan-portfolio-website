@@ -102,26 +102,102 @@ textarea {
     --gray: #313940;
   }
 
+  html {
+    font-size: 16px; 
+  }
+
   body {
+    font-size: 1rem;
     background-color: #313940;
     font-family: 'Ubuntu', sans-serif; 
-    font-size: 16px;
+    color: var(--white); 
   }
+
+  a {
+    color: var(--white); 
+    text-decoration: none;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-size: 1.1rem; 
+  }
+   
+  h5 {
+    font-size: 1rem;
+  }
+
+  h1, h2, h3 {
+    color: var(--white); 
+    font-family: 'Caesar Dressing', cursive; 
+    line-height: 1.5; 
+    width: 100%;
+  }
+
+  h4, h5 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 200; 
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  figure {
+    margin: 0; 
+  }
+
+  /* STRUCTRAL STYLES */
+
+  #about-me, footer {
+    display: flex; 
+    justify-content: center;
+    text-align: center;
+    flex-flow: row wrap; 
+  }
+
+  .content-wrapper {
+    width: 85%;
+  }
+
+  h1, h2, h3, h4, h5 {
+    margin: 0px;
+  }
+
+  p {
+    margin: 0;
+  }
+
 
   * {
     margin: 0; 
-    padding: 0
   }
 
   /* MOBILE-FIRST STYLES */
 
-  
+  /* HEADER */
 
   /* NAVIGATION BAR */
 
  .nav-bar {
   height: 70px; 
   background: var(--black);
+  padding-bottom: 10px;
  }
 
 .brand {
@@ -134,6 +210,7 @@ textarea {
 
 .brand a {
   font-family: 'Caesar Dressing', cursive;
+  font-size: 2rem;
   text-decoration: none;
   color: var(--white); 
 }
@@ -256,6 +333,45 @@ header img {
   overflow: hidden;
 }
 
+/* END HEADER */
+
+
+/* ABOUT ME */
+
+#about-me {
+  width: 100%;
+}
+
+ .about-content-wrapper {
+    width: 100%; 
+  }
+
+  #about-me p {
+    width: 100%;
+    text-align: left;
+    font-size: 1.5rem;
+    
+  }
+
+  .about-text {
+    padding-top: 30px;
+    margin: 0 0 30px 0;
+  }
+
+  #profile-image {
+    width: 90%;
+    padding: 15px;
+  }
+
+/* END ABOUT ME */
+
+
+/* FOOTER */
+
+
+
+/* END FOOTER */
+
 
 /* TABLET STYLES */
 
@@ -296,7 +412,7 @@ header img {
 }
 
 @media screen and (min-width: 799px){
-  .nav-list{
+  .nav-list {
       display: block !important;
   }
 }
