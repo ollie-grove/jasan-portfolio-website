@@ -88,18 +88,26 @@ textarea {
    ========================================================================== */
 /* ===== 
 
-    font-family: 'Caesar Dressing', cursive;
-    font-family: 'Ubuntu', sans-serif; 
+    
     
 ======== */
 
 
+/*font-family: 'Montserrat', sans-serif; */
+
+
+  @font-face {
+    font-family: ED Floriane;
+    src: url(../fonts/ED\ Floriane\ Serif-Regular.ttf);
+  }
+
   :root {
-    --yellow: #F0D36B;
-    --white: #F2F2F2;
-    --black: #0B0C0D;
-    --red: #590202;
-    --gray: #313940;
+    --light-green: #606C38;
+    --dark-green: #283618;
+    --white: #FEFAE0;
+    --light-orange: #DDA15E;
+    --dark-orange: #BC6C25;
+    --black: #282622;
   }
 
   html {
@@ -109,9 +117,9 @@ textarea {
 
   body {
     font-size: 1rem;
-    background-color: #313940;
-    font-family: 'Ubuntu', sans-serif; 
+    font-family: 'Montserrat', sans-serif; 
     color: var(--white); 
+    background-color: #282622;
   }
 
   a {
@@ -132,12 +140,13 @@ textarea {
   }
 
   h3:hover {
-    background: var(--yellow);
+    background: var(--dark-orange);
     color: var(--black);
+    border-radius: 50px;
   }
 
   h4 {
-    font-size: 1.1rem; 
+    font-size: 1.4rem; 
   }
    
   h5 {
@@ -146,13 +155,14 @@ textarea {
 
   h1, h2, h3 {
     color: var(--white); 
-    font-family: 'Caesar Dressing', cursive; 
+    font-family: ED Floriane, serif;
+    text-transform: uppercase; 
     line-height: 1.5; 
     width: 100%;
   }
 
   h4, h5 {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 200; 
   }
 
@@ -160,10 +170,11 @@ textarea {
     font-weight: bold;
   }
 
-  img {
+  /* img {
     width: 100%;
-    
   }
+
+  */
 
   figure {
     margin: 0; 
@@ -188,6 +199,7 @@ textarea {
 
   p {
     margin: 0;
+    font-size: 1.5rem;
   }
 
 
@@ -205,6 +217,7 @@ textarea {
   height: 70px; 
   background: var(--black);
   padding-bottom: 10px;
+  padding-top: 20px;
  }
 
 .brand {
@@ -216,8 +229,9 @@ textarea {
 }
 
 .brand a {
-  font-family: 'Caesar Dressing', cursive;
-  font-size: 1.8rem;
+  font-family: ED Floriane, serif;
+  text-transform: uppercase;
+  font-size: 1.5rem;
   text-decoration: none;
   color: var(--white); 
 }
@@ -247,12 +261,14 @@ nav ul li a {
   background: var(--black); 
   text-decoration: none;
   color: var(--white); 
-  font-family: 'Caesar Dressing', cursive;
+  font-family: ED Floriane, serif;
+  text-transform: uppercase;
+  font-weight: bold;
   font-size: 1.3rem;
 }
 
 nav ul li a:hover {
-  background: var(--yellow);
+  background: var(--dark-orange);
   color: var(--black);
 }
 
@@ -339,12 +355,21 @@ nav ul li ul li a {
 /* ABOUT ME */
 
 #about-me {
+  padding-top: 20px;
+  margin-bottom: 200px;
   width: 100%;
+  background-image: url("../img/mushroom-background.jpg");
+  background-repeat: no-repeat;
+  background-position: 40% 50%;
+  background-size: 100%;
+  background-attachment: fixed; 
 }
 
  .about-content-wrapper {
     width: 100%; 
+    padding-bottom: 200px;
   }
+
 
   #about-me p {
     width: 100%;
@@ -353,42 +378,81 @@ nav ul li ul li a {
     line-height: 2rem;
   }
 
+  .about-info {
+    background-color: rgba(40, 38, 34, .60);
+  }
+
+  
+  #profile-avatar {
+    max-width: 60%;
+    padding-top: 60px;
+    padding-bottom: 90px;
+  }
+
   .about-text {
-    padding-top: 30px;
+    padding-top: 90px;
     margin: 0 0 30px 0;
   }
 
-  #profile-image {
-    max-width: 90%;
+ 
+
+/* #about-me #hero-image {
+    max-width: 100%;
     padding: 0;
     border-radius: 20px;
-    filter: drop-shadow(1px 3px 9px var(--red));
+    filter: drop-shadow(1px 3px 9px var(--dark-orange));
     margin-top: 30px;
     margin-bottom: 30px;
     margin-right: 30px;
-  }
+  } */
 
-  .about-image {
-    max-width: 99%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 30px;
-    padding-bottom: 60px;
-    margin: 0;
-    overflow: hidden;
-    filter: drop-shadow(1px 3px 9px var(--red));
-    border-radius: 20px;
-  }
+ 
 
 /* END ABOUT ME */
 
+/* CLIENT REVIEWS */
+
+#client-reviews {
+  padding: 80px;
+  width: 100%;
+  background-image: url("../img/small-mushroom.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+}
+
+.client-reviews-content-wrapper {
+  display: flex;
+}
+
+.client-reviews h1 {
+  text-align: center;
+  background-color: rgba(40, 38, 34, .60);
+  color: var(--white);
+  padding-top: 40px;
+}
+
+.review-text {
+  padding: 20px;
+  background-color: rgba(40, 38, 34, .60);
+  padding: 30px;
+}
+
+.review {
+  padding: 15px;
+}
+
+/* END CLIENT REVIEWS */
 
 /* FOOTER */
 
 #contact .content-wrapper {
   max-width: 85%;
-  
+}
+
+.contact-info {
+  padding-bottom: 20px;
 }
 
  #contact {
@@ -399,14 +463,17 @@ nav ul li ul li a {
   
  #contact h1 {
   margin-bottom: 30px;
+  background-color: var(--light-orange);
+  color: var(--black);
+  border-radius: 20px;
  }
 
  #contact p {
-  color: var(--yellow);
+  color: var(--white);
  }
 
   .contact-title a:hover {
-    background-color: var(--yellow);
+    background-color: var(--dark-orange);
     color: var(--black);
   }
 
@@ -417,7 +484,7 @@ nav ul li ul li a {
 
 /* TABLET - NAVIGATION BAR */
 
-@media only screen and (max-width: 849px) {
+@media only screen and (max-width: 768px) {
 
   .nav-mobile {
     display: block;
@@ -461,7 +528,7 @@ nav ul li ul li a {
 
 
 
-@media screen and (min-width: 850px){
+@media screen and (min-width: 768px){
   .nav-list {
       display: block !important;
   }
@@ -482,24 +549,27 @@ nav ul li ul li a {
 
   .about-content-wrapper {
     display: flex; 
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .about-content-wrapper figure {
     max-width: 30%;
   }
 
-#profile-image {
+#profile-avatar {
     margin-top: 90px;
-
+    max-width: 100%;
+    padding: 0;
   }
 
   #about-me {
     text-align: left;
+    display: flex;
   }
 
   .about-info {
-    width: 58%;
+    width: 66%;
+    background-color: rgba(40, 38, 34, .80);
   }
 
   .about-info h1 {
@@ -518,6 +588,11 @@ nav ul li ul li a {
     padding: 0px;
   }
 
+  .review-text {
+    display: flex;
+    flex-direction: column;
+  }
+
   #contact h1{
     font-size: 3rem;
   }
@@ -528,7 +603,7 @@ nav ul li ul li a {
 
   #contact p {
     font-size: 1.8rem;
-    color: var(--yellow);
+    color: var(--white);
   }
 
   #contact .content-wrapper {
